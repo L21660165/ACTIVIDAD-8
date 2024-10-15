@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Imagen</title>
+    <style>
+        #image-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        #change-image-button {
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="image-container">
+        <img id="main-image" src="FOTO1.jpg" alt="Imagen" width="300">
+    </div>
+    <button id="change-image-button">Cambiar Imagen</button>
+
+    <script>
+        document.getElementById('change-image-button').addEventListener('click', function() {
+            var image = document.getElementById('main-image');
+            if (image.src.includes('image1.jpg')) {
+                image.src = 'ACT1.png';
+            } else {
+                image.src = 'image1.jpg';
+            }
+        });
+    </script>
+</body>
+</html>
